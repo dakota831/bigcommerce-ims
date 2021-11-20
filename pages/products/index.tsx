@@ -55,7 +55,7 @@ const Products = () => {
 
     const renderAction = (id: number): ReactElement => (
         <Dropdown
-            items={[ { content: 'Edit product TEST', onItemClick: () => router.push(`/products/${id}`), hash: 'edit' } ]}
+            items={[ { content: 'Edit product', onItemClick: () => router.push(`/products/${id}`), hash: 'edit' } ]}
             toggle={<Button iconOnly={<MoreHorizIcon color="secondary60" />} variant="subtle" />}
         />
     );
@@ -67,8 +67,8 @@ const Products = () => {
         <Panel>
             <Table
                 columns={[
-                    { header: 'Product name', hash: 'name', render: ({ id, name }) => renderName(id, name), isSortable: true },
-                    { header: 'Stock', hash: 'stock', render: ({ stock }) => renderStock(stock), isSortable: true },
+                    { header: 'Inventory', hash: 'name', render: ({ id, name }) => renderName(id, name), isSortable: true },
+                    { header: 'Qty', hash: 'stock', render: ({ stock }) => renderStock(stock), isSortable: true },
                     { header: 'Price', hash: 'price', render: ({ price }) => renderPrice(price), isSortable: true },
                     { header: 'Action', hideHeader: true, hash: 'id', render: ({ id }) => renderAction(id) },
                 ]}
