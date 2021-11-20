@@ -55,7 +55,7 @@ const Products = () => {
 
     const renderAction = (id: number): ReactElement => (
         <Dropdown
-            items={[ { content: 'Edit product', onItemClick: () => router.push(`/products/${id}`), hash: 'edit' } ]}
+            items={[ { content: 'Edit product TEST', onItemClick: () => router.push(`/products/${id}`), hash: 'edit' } ]}
             toggle={<Button iconOnly={<MoreHorizIcon color="secondary60" />} variant="subtle" />}
         />
     );
